@@ -10,12 +10,6 @@ const _path = path.join(__dirname, "./dist");
 app.set("port", (process.env.PORT ??= 12010));
 
 app.use(express.static(_path));
-app.use(loogger("tiny"));
-
-app.get("/", (req, res) => {
-  console.log(__dirname);
-  res.send("<h1>Hello Express</h1>");
-});
 
 const PORT = app.get("port");
 app.listen(PORT, () => {
