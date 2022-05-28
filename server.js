@@ -7,12 +7,13 @@ const bodyParser = require("body-parser");
 const app = express();
 const _path = path.join(__dirname, "./dist");
 
+app.use(express.static(_path));
+
 app.set("port", (process.env.PORT ??= 12010));
 const PORT = app.get("port");
 
-app.use(express.static(_path));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extends: true }));
 
 //form태그에서  아이디, 비번을 입력하고 post 방식으로 보냈을때 action으로 main페이지로 이동
 //   /main으로 이동이 되었을때 id.pass를 받아 콘솔창에 띄우고

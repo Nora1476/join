@@ -15,7 +15,6 @@
       body {
         width: 100%;
         height: 100%;
-        background: lightyellow;
       }
 
       #fullframe {
@@ -33,7 +32,6 @@
 
       #frm {
         width: 400px;
-        background: beige;
         margin: 0 auto;
         position: relative;
         top: -50px;
@@ -41,21 +39,38 @@
 
       #formJoin {
         text-align: center;
-        padding: 30px 20px;
+        padding: 20px 20px;
+        padding-bottom: 10px;
       }
 
       #formJoin label {
         display: inline-block;
         width: 40px;
+        font-weight: bold;
+      }
+
+      #formJoin input[type="submit"],
+      #formJoin input[type="reset"] {
+        width: 60px;
+        height: 30px;
+        margin: 20px 5px;
+        border-style: hidden;
+        border-radius: 10%;
+        background-color: rgb(181, 181, 181);
+        border-color: rgba(0, 0, 0, 0.5);
       }
 
       fieldset {
         width: 300px;
         margin: 0 auto;
+        color: rgba(0, 0, 0, 0.5);
+        border-radius: 10%;
       }
 
       legend {
         text-align: center;
+        font-size: 25px;
+        font-weight: bold;
       }
     </style>
     <script>
@@ -97,7 +112,7 @@
       <div id="content">
         <form id="frm" method="post" action="/main">
           <fieldset>
-            <legend>로그인</legend>
+            <legend>Log In</legend>
 
             <div id="formJoin">
               <label for="id">ID : </label>
