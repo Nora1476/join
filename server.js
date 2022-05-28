@@ -32,6 +32,19 @@ app.post("/main", (req, res) => {
   });
 });
 
+app.post("/finish", (req, res) => {
+  const {
+    body: { id, pass1, name, mnum1, mnum2, mnum3, email_1, email_2 },
+  } = req;
+  console.log(id, pass1, name, mnum1, mnum2, mnum3, email_1, email_2);
+
+  fs.readFile("./dist/finish.html", function (error, data) {
+    //fs 라이브러리 file 읽어오는 모듈
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.end(data);
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`real nodemon Server running at http://127.0.0.1:${PORT}/`);
   // console.log(`http://127.0.0.1:${PORT}/join`); //쿼리 추가된것도 요렇게 넣어서 같이 확인가능

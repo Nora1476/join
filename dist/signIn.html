@@ -48,7 +48,7 @@
     </style>
   </head>
   <body>
-    <form id="signin" method="post" action="finish.html">
+    <form id="signin" method="post" action="finish">
       <div class="signbox id">
         <label for="id">아이디: </label>
         <input type="text" id="id" name="id" />
@@ -73,15 +73,15 @@
           <option value="01" selected>010</option>
           <option value="02">011</option>
         </select>
-        <input type="text" id="num2" name="num2" />
-        <input type="text" id="num3" name="num3" />
+        <input type="text" id="mnum2" name="mnum2" />
+        <input type="text" id="mnum3" name="mnum3" />
       </div>
 
       <div class="signbox email">
         <label for="email">이메일: </label>
         <span>
-          <input type="email" id="email_1" name="emaill" />@
-          <input type="email" id="email_2" name="email2" />
+          <input type="email" id="email_1" name="email_l" />@
+          <input type="email" id="email_2" name="email_2" />
         </span>
       </div>
 
@@ -114,8 +114,8 @@
           return;
         }
 
-        var num2 = document.getElementById("num2");
-        var num3 = document.getElementById("num3");
+        var num2 = document.getElementById("mnum2");
+        var num3 = document.getElementById("mnum3");
         if (num2.value == "" || num3.value == "") {
           alert(`전화번호을 입력하세요!`);
           return;
