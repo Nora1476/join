@@ -28,94 +28,65 @@
     <link href="css/styles.css" rel="stylesheet" />
 
     <style>
-            * {
-              margin: 0;
-              padding: 0;
-            }
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-      <<<<<<< HEAD
-            #page-top {
-              height: 100vh;
-            }
+      #page-top {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
-            .container_signin {
-              width: 100%;
-              height: 100%;
-      =======
-            html,
-            body {
-              width: 100%;
-              height: 100%;
-            }
+      .container_signin {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-            .signinContainer {
-              height: 100%;
-              width: 100%;
-      >>>>>>> a20a9472a0de5ea576694ea366e0c313274d7300
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-      <<<<<<< HEAD
-      =======
-            }
+      html {
+        width: 100%;
+        height: 100vh;
+      }
 
-            #fullframe {
-              display: table;
-              width: 100%;
-              height: 100%;
-            }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        vertical-align: middle;
+      }
 
-            #content {
-              display: table-cell;
-              vertical-align: middle;
-              width: 100%;
-              height: 100%;
-      >>>>>>> a20a9472a0de5ea576694ea366e0c313274d7300
-            }
+      input {
+        width: 120px;
+      }
+      .signbox {
+        margin-top: 10px;
+      }
 
-            #frm {
-              width: 400px;
-              margin: 0 auto;
-              position: relative;
-              top: -50px;
-            }
+      .signbox label {
+        display: inline-block;
+        width: 120px;
+        text-align: right;
+      }
 
-            #formJoin {
-              text-align: center;
-              padding: 20px 20px;
-              padding-bottom: 10px;
-            }
+      .signboxbtn {
+        text-align: center;
+      }
 
-            #formJoin label {
-              display: inline-block;
-              width: 40px;
-              font-weight: bold;
-            }
+      #btnSignin {
+        height: 40px;
+        margin-top: 10px;
+      }
 
-            #formJoin input[type="submit"],
-            #formJoin input[type="reset"] {
-              width: 60px;
-              height: 30px;
-              margin: 20px 5px;
-              border-style: hidden;
-              border-radius: 10%;
-              background-color: rgb(181, 181, 181);
-              border-color: rgba(0, 0, 0, 0.5);
-            }
-
-            fieldset {
-              width: 300px;
-              margin: 0 auto;
-              color: rgba(0, 0, 0, 0.5);
-              border-radius: 10%;
-            }
-
-            legend {
-              text-align: center;
-              font-size: 25px;
-              font-weight: bold;
-            }
+      footer {
+        width: 100%;
+      }
     </style>
   </head>
 
