@@ -6,6 +6,26 @@ module.exports.index = (req, res) => {
     res.end(data);
   });
 };
+module.exports.login = (req, res) => {
+  fs.readFile("./dist/login.html", function (error, data) {
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.end(data);
+  });
+};
+module.exports.signin = (req, res) => {
+  fs.readFile("./dist/signIn.html", function (error, data) {
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.end(data);
+  });
+};
+
+//get 방식 대표 함수를 readFileForm으로 설정해두고 파일 불러올때 재사용 할 수 있음
+// const readFileForm = function(where, req, res) {
+//   fs.readFile(`./dist/${where}.html`, function (error, data) {
+//     res.writeHead(200, { "Content-Type": "text/html" });
+//     res.end(data);
+//   });
+// }
 
 module.exports.postmain = (req, res) => {
   const {
