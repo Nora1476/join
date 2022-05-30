@@ -16,16 +16,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //get 요청
-<<<<<<< HEAD
 app.get("/", simple_module.index);
 app.get("/login", simple_module.login);
 app.get("/signin", simple_module.signin);
 
-=======
-app.get("/", simple_module.index);  
-
-//post 요청
->>>>>>> a20a9472a0de5ea576694ea366e0c313274d7300
 app.post("/main", simple_module.postmain);
 app.post("/finish", simple_module.finish);
 
