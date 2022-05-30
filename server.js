@@ -20,11 +20,12 @@ app.get("/", simple_module.index);
 app.get("/login", simple_module.login);
 app.get("/signin", simple_module.signin);
 
+//post 요청
 app.post("/main", simple_module.postmain);
 app.post("/finish", simple_module.finish);
 
 app.listen(PORT, () => {
   console.log(`real nodemon Server running at http://127.0.0.1:${PORT}/`);
-  // console.log(`http://127.0.0.1:${PORT}/main`); //쿼리 추가해서 요렇게도 바로 확인가능
+  console.log(`http://127.0.0.1:${PORT}/finish`); //쿼리 추가해서 요렇게도 바로 확인가능
   // console.log(`http://127.0.0.1:${PORT}/login`);
 });

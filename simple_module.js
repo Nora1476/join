@@ -19,7 +19,6 @@ module.exports.signin = (req, res) => {
   });
 };
 
-
 //get 방식 대표 함수를 readFileForm으로 설정해두고 파일 불러올때 재사용 할 수 있음
 // const readFileForm = function(where, req, res) {
 //   fs.readFile(`./dist/${where}.html`, function (error, data) {
@@ -27,7 +26,6 @@ module.exports.signin = (req, res) => {
 //     res.end(data);
 //   });
 // }
-
 
 module.exports.postmain = (req, res) => {
   const {
