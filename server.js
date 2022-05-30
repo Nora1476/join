@@ -14,8 +14,11 @@ app.use(express.static(_path));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get("/", simple_module.index);  
-//get 요청이오면 simple_module.index 미들웨어로 처리하겠다. 대신 경로는 "/"이다
+//get 요청
+app.get("/", simple_module.index);
+app.get("/login", simple_module.login);
+app.get("/signin", simple_module.signin);
+
 app.post("/main", simple_module.postmain);
 app.post("/finish", simple_module.finish);
 

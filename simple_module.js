@@ -6,6 +6,18 @@ module.exports.index = (req, res) => {
     res.end(data);
   });
 };
+module.exports.login = (req, res) => {
+  fs.readFile("./dist/login.html", function (error, data) {
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.end(data);
+  });
+};
+module.exports.signin = (req, res) => {
+  fs.readFile("./dist/signIn.html", function (error, data) {
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.end(data);
+  });
+};
 
 module.exports.postmain = (req, res) => {
   const {
